@@ -1,0 +1,14 @@
+# Deploy app
+
+- sls deploy --verbose --stage dev --aws-profile development
+- sls remove --verbose --stage dev --aws-profile development
+
+# Invoke function for testing
+
+
+- sls deploy -f sendMail --aws-profile development
+- sls invoke -f sendMail -l --aws-profile development
+
+# Watching logs streams
+
+- sls logs -f sendMail -t --aws-profile development
